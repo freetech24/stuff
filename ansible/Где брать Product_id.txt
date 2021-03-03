@@ -1,0 +1,9 @@
+
+32 бит
+
+HKLM:Software\Microsoft\Windows\CurrentVersion\Uninstall
+
+
+64 бит
+
+HKLM:Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall

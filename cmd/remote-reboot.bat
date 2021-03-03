@@ -1,0 +1,1 @@
+shutdown /r /f /m \\pcname -t 00

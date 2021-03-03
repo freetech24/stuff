@@ -1,0 +1,6 @@
+git clone https://github.com/freetech24/backup.git ссылка на бренч в гите 
+3) git add + название файла или git add -A если хотим залить все файлы 
+4) git status - проверить какие файлы мы выбрали для комита 
+4) git commit -m "коментарий"  
+5) git push 
+6) git pull - скачатьс репозитория 

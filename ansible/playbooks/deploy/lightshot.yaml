@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install lightshot
+    win_package:
+      path: \\fs-01\fs_deploy\lightshot.exe
+      product_id: {30A5B3C9-2084-4063-A32A-628A98DE512B}
+      arguments: /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+      state: present
+      user_name: domain\user
+      user_password: pass

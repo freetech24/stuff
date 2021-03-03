@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: Install 7zip 
+    win_package:
+      path: \\fs-01\fs_deploy\7zip.exe
+      product_id: 7-Zip
+      arguments: /S
+      state: present
+      user_name: domain\user
+      user_password: pass

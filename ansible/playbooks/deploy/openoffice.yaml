@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: Install Open Office
+    win_package:
+      path: \\fs-01\fs_deploy\openoffice.exe
+      product_id: {1E630B46-F055-4A3C-8BB5-890320BD5234}
+      arguments: /S /v /qb
+      state: present
+      user_name: domain\user
+      user_password: pass

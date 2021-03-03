@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install notepad++
+    win_package:
+      path: \\fs-01\fs_deploy\npp.exe
+      product_id: Notepad++ 
+      arguments: /S
+      state: present
+      user_name: pass
+      user_password: domain\user

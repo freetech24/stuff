@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: Install OnlyOffice
+    win_package:
+      path: \\fs-01\fs_deploy\DesktopEditors_x64.exe
+      product_id: ONLYOFFICE Desktop Editors 5.5
+      arguments: /SILENT
+      state: present
+      user_name: domain\user
+      user_password: pass

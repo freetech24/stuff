@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install FireFox Browser
+    win_package:
+      path: \\fs-01\fs_deploy\firefox.exe
+      product_id: Mozilla Firefox 77.0.1 (x64 ru)
+      arguments: /qn /silent 
+      state: present
+      user_name: domain\user
+      user_password: pass

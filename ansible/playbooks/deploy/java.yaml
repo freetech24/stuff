@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install java runtime
+    win_package:
+      path: \\fs-01\fs_deploy\jre.exe
+      product_id: {26A24AE4-039D-4CA4-87B4-2F32180251F0}
+      arguments: INSTALL_SILENT=1 AUTO_UPDATE=0 REBOOT=0 SPONSORS=0 REMOVEOUTOFDATEJRES=1
+      state: present
+      user_name: domain\user
+      user_password: pass

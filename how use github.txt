@@ -4,3 +4,4 @@ git clone https://github.com/freetech24/backup.git ссылка на бренч 
 4) git commit -m "коментарий"  
 5) git push 
 6) git pull - скачатьс репозитория 
+7) git remote set-url origin https://yourusername@github.com/user/repo.git  - смена пользователя

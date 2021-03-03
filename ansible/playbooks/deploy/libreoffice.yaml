@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install libreoffice
+    win_package:
+      path: \\fs-01\fs_deploy\libreoffice.msi
+      product_id: {FF0BB16C-BD95-497C-BCE6-4B567668AF1B}
+      arguments: /quiet /norestart
+      state: present
+      user_name: domain\user
+      user_password: pass

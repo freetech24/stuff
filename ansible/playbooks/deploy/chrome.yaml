@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install Chrome Browser
+    win_package:
+      path: \\fs-01\fs_deploy\chrome.exe
+      product_id: Google Chrome
+      arguments: /silent /install 
+      state: present
+      user_name: domain\user
+      user_password: pass

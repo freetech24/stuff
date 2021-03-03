@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install skype
+    win_package:
+      path: \\fs-01\fs_deploy\skype.exe
+      product_id: Skype_is1
+      arguments: /VERYSILENT /SP- /NOCANCEL /NORESTART /SUPPRESSMSGBOXES /NOLAUNCH
+      state: present
+      user_name: domain\user
+      user_password: pass

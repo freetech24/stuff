@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install Nextcloud Client
+    win_package:
+      path: \\fs-01\fs_deploy\nextcloud.exe
+      product_id: Nextcloud
+      arguments: /S
+      state: present
+      user_name: domain\user
+      user_password: pass

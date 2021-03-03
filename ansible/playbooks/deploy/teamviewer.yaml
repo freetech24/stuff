@@ -1,0 +1,14 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install teamviewer
+    win_package:
+      path: \\fs-01\fs_deploy\teamviewer.exe
+      product_id: TeamViewer
+      arguments: /S 
+      state: present
+      user_name: domain\user
+      user_password: pass
+
+

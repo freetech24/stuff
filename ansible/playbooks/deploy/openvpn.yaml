@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install OpenVPN
+    win_package:
+      path: \\fs-01\fs_deploy\openvpn.exe
+      product_id: OpenVPN
+      arguments: /S
+      state: present
+      user_name: domain\user
+      user_password: pass

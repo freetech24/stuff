@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: Install certivity 
+    win_package:
+      path: \\fs-01\fs_deploy\certivity.exe
+      product_id: CERTivity-2.0
+      arguments: /qn -lang rus -silent -y
+      state: present
+      user_name: domain\user
+      user_password: pass

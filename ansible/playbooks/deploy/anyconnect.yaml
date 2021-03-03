@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install Cisco AnyConnect Secure Mobility Client
+    win_package:
+      path: \\fs-01\fs_deploy\anyconnect.msi
+      product_id: {EA407530-0BF1-47CA-B953-1C395BBDBB63}
+      arguments: /quiet /norestart
+      state: present
+      user_name: domain\user
+      user_password: pass

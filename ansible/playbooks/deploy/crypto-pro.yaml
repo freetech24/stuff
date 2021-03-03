@@ -1,0 +1,21 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: Install CryptoPro
+    win_package:
+      path: \\fs-01\fs_deploy\crypto.exe
+      product_id: {407E5BA7-6406-40BF-A4DC-3654B8F584C1}
+      arguments: -gm2 -lang rus -kc kc3 -silent -nodlg
+      state: present
+      user_name: domain\user
+      user_password: pass
+
+  - name: Install csp-plugin
+    win_package:
+      path: \\fs-01\fs_deploy\csp-plugin.exe
+      product_id: {E12CC7EE-36B7-4AAA-924E-2F5CD75BCECF}
+      arguments: -gm2 -silent -norestart -cadesargs "/quiet"
+      state: present
+      user_name: domain\user
+      user_password: pass

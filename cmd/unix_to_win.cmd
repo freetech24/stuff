@@ -1,0 +1,1 @@
+PSCP.EXE -r user@IP:/home/folder/file C:\folder

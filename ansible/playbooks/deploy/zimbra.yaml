@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: install zimbra desktop
+    win_package:
+      path: \\fs-01\fs_deploy\zimbra.msi
+      product_id: {E347D99A-19B5-435B-96F1-341189B7EF8B}
+      arguments: /qn /norestart
+      state: present
+      user_name: domain\user
+      user_password: pass

@@ -1,0 +1,12 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+ 
+  - name: Install VipNet
+    win_package:
+      path: \\fs-01\fs_deploy\vipnet.exe
+      product_id: {91D4C24B-FAA3-48F7-87AE-309E0E4FBC0B}
+      arguments: /qn /forcerestart
+      state: present
+      user_name: domain\user
+      user_password: pass

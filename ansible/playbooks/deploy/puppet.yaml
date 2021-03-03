@@ -1,0 +1,10 @@
+- hosts: win
+  gather_facts: no
+  tasks:
+
+  - name: Install puppet-agent 
+    win_package:
+      path: \\fs-01\fs_deploy\puppet.msi
+      state: present
+      user_name: domain\user
+      user_password: pass
